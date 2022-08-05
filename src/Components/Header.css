@@ -1,0 +1,26 @@
+header{
+    height: 100px;
+    background-color: aquamarine;
+    display: flex;
+    /* justify-content: end; */
+}
+
+.header-title{
+    line-height: 100px;
+    margin-left: 40px;
+}
+
+.header-title a{
+    color: rgb(255, 169, 47);    
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.nav-bar{
+    display: flex;
+    line-height: 100px;
+    margin-left: auto;
+    display: none;
+}
+

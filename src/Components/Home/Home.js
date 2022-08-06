@@ -19,6 +19,7 @@ function Home() {
         {status.map((status) => (
             <Homesection status={status} />
         ))}
+        <Link to='/menu'>menu</Link>
     </div>
   )
 }

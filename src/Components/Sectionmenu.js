@@ -1,8 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './Section_menu.css'
+import Statusbox from './Statusbox'
 
-function Sectionmenu() {
+function Sectionmenu({ mostrecent }) {
   return (
     <div>
         <div className="start-menu">
@@ -10,6 +11,15 @@ function Sectionmenu() {
         <h2 className="start-hide">←Home</h2>
         <h2 className="section-num">Section</h2>
     </div>
+
+    <Statusbox
+        text='進捗'
+        percentage={mostrecent.progress}
+        bar_color='blue'
+        emp='3'
+    
+    />
+
     <div className="start-status-wrap">
         <div className="start-status st1 light-theme">
             <p className="st1-1">進歩</p>

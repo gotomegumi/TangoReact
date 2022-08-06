@@ -4,40 +4,6 @@
     margin-bottom: 20px;
 }
 
-.status{
-    text-align: center;
-    width: 45%;
-    height: 180px;
-    border-radius:  15px;
-    margin-right: 20px;
-    margin-bottom: 13px;
-    padding: 20px 10px 10px;
-    display: inline-block;
-    flex-shrink: 0;
-    border: 2px solid black;
-    box-shadow: rgb(255, 178, 89) 2px 3px;
-    font-size: large;
-    cursor: pointer;
-}
-
-
-
-.st-text1{
-    font-size: 20px;
-}
-
-.st-text-sec{
-}
-
-.st-text3{
-}
-
-.st-text4{
-    font-size: 20px;
-    color: rgb(53, 133, 198);
-    font-weight: bold;
-    display: inline-block;
-}
 
 .st-num{
     color: rgb(0, 0, 209);
@@ -78,7 +44,7 @@
 }
 
 .bar1-ar{
-    /* background-color: rgb(179, 255, 128); */
+    background-color: rgb(179, 255, 128);
     height: 20px;
 }
 
@@ -215,9 +181,6 @@
     .status{
         width: 45%;
         margin-right: 5px;
-    }
-
-    .status-wrap{
     }
 
     .status-wrap h2{

@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Homestatus from '../Homestatus'
+import Homestatus from './Homestatus'
 import Homesection from './Homesection'
+import './Home.css'
 
 
 function Home() {

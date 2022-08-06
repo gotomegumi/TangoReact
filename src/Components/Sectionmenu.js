@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import './Section_menu.css'
 
 function Sectionmenu() {
   return (
@@ -27,7 +29,7 @@ function Sectionmenu() {
         </div>
     </div> 
     <div className="start-btn box light-theme">
-        <a href="#">始める</a> 
+        <Link to={'/quez'}>始める</Link> 
     </div>
     <div className="mistake-btn box light-theme">
         <a href="#">覚えてない</a> 

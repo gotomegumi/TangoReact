@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Components/Header';
 import Home from './Components/Home';
+import Quez from './Components/Quez';
 import Sectionmenu from './Components/Sectionmenu';
 import {
   BrowserRouter,
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='menu' element={<Sectionmenu />} />
+          <Route path='quez' element={<Quez />} />
         </Routes>
       </BrowserRouter>
     </div>

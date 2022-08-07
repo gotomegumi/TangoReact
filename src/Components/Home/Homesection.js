@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Homesection = ({ status }) => {
   return (
     <div>
         <li className="section box light-theme {{ progress.section }}" value="{{ progress.section }}">
-            <p>Section{ status.section } : 特に分類なし</p>
+            <Link to={'/menu'}>Section{ status.section } : 特に分類なし</Link>
             <div className="section-bars">
                 <p>進捗</p>
                 <p className="prg-percent">{ status.progress }%</p>

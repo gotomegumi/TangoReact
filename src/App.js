@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Header from './Components/Header';
 import Home from './Components/Home/Home';
 import Quez from './Components/Quez';
-import Sectionmenu from './Components/Sectionmenu';
+import Sectionmenu from './Components/Section_menu';
 import {
   BrowserRouter,
   Routes,

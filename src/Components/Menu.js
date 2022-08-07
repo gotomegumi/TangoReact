@@ -1,25 +1,28 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './Section_menu.css'
 import Statusbox from './Statusbox'
 
-function Sectionmenu({ mostrecent }) {
+function Menu({ status }) {
+    let params = useParams();
+    const section = params.sectionNum;
   return (
+
     <div>
         <div className="start">
             <Link className="start-hide" to={'/'}>←Home</Link>
-            <h2 className="section-num">Section</h2>
+            <h2 className="section-num">Section{section}</h2>
         </div>
         <div>
             <Statusbox
             text='進捗'
-            percentage={mostrecent.progress}
+            percentage={status[section-1].progress}
             bar_color='blue'
             emp='3'
             />
             <Statusbox
                 text='定着度'
-                percentage={mostrecent.answerrate}
+                percentage={status[section-1].answerrate}
                 bar_color='green'
                 emp='3'
             />
@@ -39,4 +42,4 @@ function Sectionmenu({ mostrecent }) {
   )
 }
 
-export default Sectionmenu
+export default Menu

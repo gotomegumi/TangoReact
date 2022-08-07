@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Indicater from './Indicater'
 
 const Statusbox = ({ text, section, bar_color, percentage, emp }) => {
 
@@ -9,10 +10,8 @@ const Statusbox = ({ text, section, bar_color, percentage, emp }) => {
     <Status id="status2" value=''>
         <p>{text}</p>
         {section>0 && (<Text2 emp={emp}>Section{section}</Text2>)}
-        <Bar_wrap>
-            <Bar percentage={percentage} color={bar_color}></Bar>
-        </Bar_wrap>
         <Text3 emp={emp}>{percentage}%</Text3>
+        <Indicater percentage={percentage} bar_color={bar_color}/>
         <p>スタート!</p>
     </Status> 
   )
@@ -42,18 +41,5 @@ const Text3 = styled.p`
   font-size: ${(props) => props.emp==='3' ? '40px' : '20px'};
 `
 
-const Bar_wrap = styled.div`
-  leight: 20px;
-  background-color: #EEEEEE;
-  border-radius: 10px;
-`
-
-const Bar = styled.div`
-  width: ${(props) => props.percentage+'%'};
-  background-color: ${(props) => props.color};
-  height: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-`
 
 export default Statusbox

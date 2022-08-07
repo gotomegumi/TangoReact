@@ -57,7 +57,7 @@
     border: solid 2px black;
     font-size: 20px;
     cursor: pointer;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
 }
 
 .section:hover{
@@ -69,7 +69,7 @@
 }
 
 
-.section-bars{
+/* .section-bars{
     display: flex;
     width: 100%;
     height: 13px;
@@ -78,7 +78,7 @@
 
 .section-bars p{
     font-size: 12px;
-}
+} */
 
 .bar-se1-wrap{
     width: 25%;

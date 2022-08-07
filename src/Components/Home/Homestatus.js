@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Statusbox from '../Statusbox'
 
-const Homestatus = ({status}) => {
+const Homestatus = ({mostrecent}) => {
     const u = 24
   return (
     <div>
@@ -10,17 +10,17 @@ const Homestatus = ({status}) => {
             <h2>Status</h2>
             <ul className="status-box-wrap">
                 <Statusbox 
-                    section={status[1].section}
+                    section={mostrecent.section}
                     text='進捗'
                     bar_color='blue'
-                    percentage={status[1].progress}
+                    percentage={mostrecent.progress}
                     emp='2'
                 />
                 <Statusbox 
                     text='正解率'
-                    section={status[1].section}
+                    section={mostrecent.section}
                     bar_color='green'
-                    percentage={status[1].answerrate}
+                    percentage={mostrecent.answerrate}
                     emp='2'
                 />
                 <li className="status box light-theme"></li>

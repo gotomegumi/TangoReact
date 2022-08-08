@@ -26,8 +26,8 @@ const Status = styled.div`
   padding: 17px 10px 10px;
   display: inline-block;
   flex-shrink: 0;
-  border: 2px solid black;
-  box-shadow: rgb(255, 178, 89) 2px 3px;
+  border: 2px solid #ffa159;
+  box-shadow: #ffa159 4px 4px;
   font-size: large;
   cursor: pointer;
   font-size: 20px;

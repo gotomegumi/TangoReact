@@ -17,7 +17,7 @@ function App() {
     {section:3, progress:90, answerrate:20},
   ])
   const [mostrecent, setRecent] = useState({
-    section:2,
+    section:3,
     progress:30,
     answerrate:40
   })

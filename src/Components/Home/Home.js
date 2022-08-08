@@ -10,8 +10,8 @@ function Home({ mostrecent, status }) {
   return (
     <div>
         <Homestatus mostrecent={mostrecent}/>
-        {status.map((status) => (
-            <Homesection status={status} />
+        {status.map((status, index) => (
+            <Homesection status={status} index={index} key={index}/>
         ))}
         <Link to='/menu'>menu</Link>
     </div>

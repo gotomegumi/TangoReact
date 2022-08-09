@@ -8,12 +8,15 @@ const Section = ({ status, index }) => {
         navigate('/menu/'+section)
     }
     const navigate = useNavigate()
-    const sec_color = 
+    const sec_color = [
+        'rgb(52, 218, 255)',
+        'rgb(255, 225, 105)',
+        'rgb(255, 135, 135)'
+    ]
     
-    {
-        sec0:'rgb(52, 218, 255)',
-        sec1:'rgb(255, 225, 105)'}
-        // --sec2:rgb(255, 135, 135);
+    
+        
+        // --sec2:;
         // --sec3:rgb(236, 255, 254);
         // --sec4:rgb(156, 255, 151);
         // --sec5:rgb(120, 255, 221);
@@ -29,54 +32,57 @@ const Section = ({ status, index }) => {
         // --sec15:rgb(107, 245, 255);
         // --sec16:rgb(67, 136, 255);
         // --sec17:rgb(123, 86, 255);
-    
-    console.log(sec_color[`${index}`])
-    let this_color = sec_color[{index}]
+    const color=sec_color[`${index}`]
 
-  return (
+    return (
     <Section_wrap 
         onClick={() => navigate('/menu/'+status.section)}
-        color={this_color}
+        color={color}
     >
-        <div to={'/menu'}>
-        <div>Section{ status.section } : 特に分類なし </div>
-            <Section_bars>
-                <p>進捗</p>
-                <p>{ status.progress }%</p>
-                <I_wrap>
-                    <Indicater height='8px' bar_color='#1b91ff' percentage={status.progress}/>
-                </I_wrap>
-                <p>暗記</p>
-                <p>{ status.answerrate }%</p>
-                <I_wrap>
-                    <Indicater height='8px' bar_color='#70ba08' percentage={status.answerrate}/>
-                </I_wrap>
-            </Section_bars>
-        </div>
+        <Section_text color={color}>Section{ status.section } : 特に分類なし </Section_text>
+        <Section_bars>
+            <p>進捗</p>
+            <p>{ status.progress }%</p>
+            <I_wrap>
+                <Indicater height='8px' bar_color='#1b91ff' percentage={status.progress}/>
+            </I_wrap>
+            <p>暗記</p>
+            <p>{ status.answerrate }%</p>
+            <I_wrap>
+                <Indicater height='8px' bar_color='#70ba08' percentage={status.answerrate}/>
+            </I_wrap>
+        </Section_bars>
         
     </Section_wrap>
   )
 }
 
 const Section_wrap = styled.li`
-width: 100%;
-border: solid 2px black;
-border-radius: 5px;
-margin-bottom: 30px;
-box-shadow: ${props => props.color ? props.color :'rgb(255, 216, 109)'}  6px 6px, black 6px 6px 0 2px;
-border-radius: 15px;
-padding: 10px;
-cursor: pointer;
+    width: 100%;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: ${props => props.color ? props.color :'rgb(255, 216, 109)'}  6px 6px, black 6px 6px 0 2px;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: #EEEEEE;
+    }
+`
+
+const Section_text = styled.p`
+    color: ${props => props.color};
 `
 
 const Section_bars = styled.div`
-display: flex;
+    display: flex;
 `
 
 const I_wrap = styled.div`
-width: 25%;
-padding-top: 7px;
-margin: 0 5px;
+    width: 25%;
+    padding-top: 7px;
+    margin: 0 5px;
 `
 
 export default Section

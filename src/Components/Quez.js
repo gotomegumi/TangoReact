@@ -4,7 +4,6 @@ import Indicater from './Indicater'
 
 const Quez = () => {
   const [cardnum, setCardnum] = useState(0)
-  const [progress, setProgress] = useState(0)
   const [visible, setVisible] = useState(false)
   const [words, setWords] = useState([
     {korean:'의사', meaning:'医者', pronounce:'ウィサ', learning:0, section:1},
@@ -31,11 +30,11 @@ const Quez = () => {
     <div>
       {words.map((word, index) => (
       <Card key={index} cardnum={cardnum} num={index}>
-        <Section_num>Section{word.section}</Section_num>
+        <Section_num>Section{word.section}{index}</Section_num>
         <Progress_bar><Indicater 
           bar_wrap_color='#FFC3C3' 
           bar_color='#FF7171' 
-          percentage={(index)*100/total} 
+          percentage={(index+1)*100/(total+1)} 
         /></Progress_bar>
         <Word><p>{word.korean}</p></Word>
         <Card_hidden vis={visible}>
@@ -51,7 +50,27 @@ const Quez = () => {
         <Showanswer onClick={show}><Show>答えを見る</Show></Showanswer>
       </Card>
       ))}
-      
+      <Card num={total} cardnum={cardnum}>
+        <div class="card-wrap light-theme last-card">
+          <h2 class="last-title-k">완료!</h2>
+          <p class="last-title">完了！</p>
+          <p>今回の正解数</p>
+              <div class="this-ar">0/0</div> 
+          <p>全体の正解率</p> 
+          <div  class="bar-wrap ar bar3-wrap">
+              <div id="result-bar" class="ar bar3">0</div>
+          </div>  
+          <p>進捗</p>
+          <div  class="bar-wrap prg bar3-wrap">
+              <div id="result-bar2" class="prg bar3">0</div>
+          </div>  
+          <div class="last-goto light-theme">       
+              <a class="lg1" href="#">recordを見る</a>
+              <a class="lg1" href="/">home</a>
+              <a class="lg2">続ける</a>
+          </div>
+        </div>
+      </Card>
     </div>
   )
 }
@@ -127,9 +146,9 @@ const Button = styled.button`
   font-size: 50px;
   background-color: white;
   cursor: pointer;
+  &:hover{background-color: #eeeeee;}
+  &:active{border: solid 3px grey}
 ` 
-
-
 
 const Showanswer = styled.div`
   position: absolute;
@@ -140,10 +159,10 @@ const Showanswer = styled.div`
 const Show = styled.button`  
   width: 150px;
   height: 50px;
-  border: 2px solid black;
+  border: 2px solid grey;
   border-radius: 15px;
   display: inline-block;
-  background-color: #CBECFF;
+  background-color: #dbf9ff;
   font-size: 20px;
   cursor: pointer;
 `

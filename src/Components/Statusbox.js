@@ -21,8 +21,6 @@ const Status = styled.div`
   width: 180px;
   height: 180px;
   border-radius:  15px;
-  margin-right: 20px;
-  margin-bottom: 13px;
   padding: 17px 10px 10px;
   display: inline-block;
   flex-shrink: 0;
